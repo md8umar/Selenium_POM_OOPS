@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public abstract class BasePage extends Page{
+public class BasePage extends Page{
 
     public BasePage(WebDriver driver){
         super(driver);
@@ -39,7 +39,7 @@ public abstract class BasePage extends Page{
         try {
             wait.until(ExpectedConditions.presenceOfElementLocated(locator));
         }
-        catch (){
+        catch (Exception e){
             System.out.println("Some exception occured "+ locator.toString());
         }
     }
@@ -50,7 +50,8 @@ public abstract class BasePage extends Page{
             wait.until(ExpectedConditions.titleContains(title));
         }
         catch (Exception e){
-            System.out.println("Some exception occured "+ locator.toString());
+            e.printStackTrace();
         }
     }
+
 }
