@@ -1,8 +1,9 @@
 pipeline {
     agent any
-        stage ('Test') {
+    stages {
+        stage ('Build') {
             steps {
-                sh 'mvn clean Test'
+                sh 'mvn clean test'
             }
         }
         stage('reports') {
@@ -13,9 +14,10 @@ pipeline {
                             jdk: '',
                             properties: [],
                             reportBuildPolicy: 'ALWAYS',
-                            results: [[path: '/allure-results']]
+                            results: [[path: 'target/allure-results']]
                     ])
             }
             }
         }
     }
+}
