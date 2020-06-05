@@ -7,7 +7,7 @@ pipeline {
                 * using `true` to allow the Pipeline to continue nonetheless
                 */
                 sh 'clean test'
-                allure 'allure-results'
+
             }
         }
     }
