@@ -2,13 +2,12 @@ pipeline {
     agent any
     tools {
             maven 'LocalMaven'
-            jdk 'localJDK'
         }
 
     stages {
         stage ('Test') {
             steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true install'
+                sh 'mvn clean install -DskipTests=true'
             }
         }
         stage('reports') {
@@ -19,7 +18,7 @@ pipeline {
                             jdk: '',
                             properties: [],
                             reportBuildPolicy: 'ALWAYS',
-                            results: [[path: 'target/allure-results']]
+                            results: [[path: '/allure-results']]
                     ])
             }
             }
