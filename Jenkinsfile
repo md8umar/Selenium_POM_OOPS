@@ -1,13 +1,21 @@
 pipeline {
     agent any
-    stages {
-        stage('Test') {
+        stage ('Test') {
             steps {
-                /* `make check` returns non-zero on test failures,
-                * using `true` to allow the Pipeline to continue nonetheless
-                */
-                sh 'mvn clean test'
-
+                sh 'mvn clean Test'
+            }
+        }
+        stage('reports') {
+            steps {
+            script {
+                    allure([
+                            includeProperties: false,
+                            jdk: '',
+                            properties: [],
+                            reportBuildPolicy: 'ALWAYS',
+                            results: [[path: '/allure-results']]
+                    ])
+            }
             }
         }
     }
