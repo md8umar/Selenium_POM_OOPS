@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage ('Test') {
             steps {
-                sh 'mvn clean test'
+                sh 'mvn -Dmaven.test.failure.ignore=true install'
             }
         }
         stage('reports') {
