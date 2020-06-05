@@ -1,12 +1,12 @@
 pipeline {
     agent any
     tools {
-            maven 'Maven 3.5.4'
-            jdk 'jdk8'
+            maven 'LocalMaven'
+            jdk 'localJDK'
         }
 
     stages {
-        stage ('Build') {
+        stage ('Test') {
             steps {
                 sh 'mvn clean test'
             }
