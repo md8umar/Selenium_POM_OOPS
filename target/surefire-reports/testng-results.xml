@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="POM test" duration-ms="61770" started-at="2020-06-05T05:33:44Z" finished-at="2020-06-05T05:34:46Z">
+    <groups>
+    </groups>
+    <test name="Home page" duration-ms="61770" started-at="2020-06-05T05:33:44Z" finished-at="2020-06-05T05:34:46Z">
+      <class name="MyTests.HomePage_Test">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:MyTests.HomePage_Test@f0e995e]" name="setup" is-config="true" duration-ms="49064" started-at="2020-06-05T05:33:44Z" finished-at="2020-06-05T05:34:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyPageTitle()[pri:1, instance:MyTests.HomePage_Test@f0e995e]" name="verifyPageTitle" duration-ms="1244" started-at="2020-06-05T05:34:34Z" finished-at="2020-06-05T05:34:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPageTitle -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:MyTests.HomePage_Test@f0e995e]" name="teardown" is-config="true" duration-ms="1464" started-at="2020-06-05T05:34:35Z" finished-at="2020-06-05T05:34:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:MyTests.HomePage_Test@f0e995e]" name="setup" is-config="true" duration-ms="7587" started-at="2020-06-05T05:34:37Z" finished-at="2020-06-05T05:34:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyHeadertitle()[pri:2, instance:MyTests.HomePage_Test@f0e995e]" name="verifyHeadertitle" duration-ms="811" started-at="2020-06-05T05:34:44Z" finished-at="2020-06-05T05:34:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeadertitle -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:MyTests.HomePage_Test@f0e995e]" name="teardown" is-config="true" duration-ms="717" started-at="2020-06-05T05:34:45Z" finished-at="2020-06-05T05:34:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- MyTests.HomePage_Test -->
+    </test> <!-- Home page -->
+  </suite> <!-- POM test -->
+</testng-results>
